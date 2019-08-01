@@ -112,6 +112,7 @@ gene_family_matrix_summed = numpy.zeros( (len(gene_list_by_families), len(evolut
 
 ####Make a table that lists the fraction of clones from a particular environment that got a nonsynonymous mutation in a particular gene
 
+nhits_per_gene = numpy.zeros((len(gene_list_by_families),),dtype='int')
 for gene in gene_list_by_families:
 
 	family = gene_family_lookup[gene]
@@ -123,10 +124,14 @@ for gene in gene_list_by_families:
 		if env in gene_dict[gene]:
 			
 			gene_family_matrix[gene_ind, i] += (gene_dict[gene][env][0] + gene_dict[gene][env][1])/clones_per_env_dict[env]###All nonsyn muts
-			
+			nhits_per_gene[gene_ind] += gene_dict[gene][env][0] + gene_dict[gene][env][1]
 			
 family_labels = {'Ras':'Ras','invasive growth in response to glucose limitation':'Invasive\ngrowth\nin gluc lim','conjugation':'Conjugation','response to osmotic stress':'Osmotic\nstress','cellular ion homeostasis':'Ion\nhomeostasis','response to chemical':'Resp. to\nchemical','protein modification by small protein conjugation or removal':'Protein\nmodification','chromatin organization':'Chromatin\norganization','cell wall organization or biogenesis':'Cell wall','lipid metabolic process':'Lipid met.\nprocess','other':'Other'}#'Transcription\nby RNA Pol II',
 
+gene_label_list = []
+for i in range(len(nhits_per_gene)):
+	gene_label_list.append( gene_list_by_families[i] + ' (' + str(nhits_per_gene[i]) + ')' )
+	
 pt.figure(figsize=(8,6))
 print(gene_family_matrix)
 zz = numpy.ma.masked_where(gene_family_matrix < 0.001, gene_family_matrix)
@@ -138,7 +143,8 @@ ax = pt.gca()
 ax.set_yticks(numpy.arange(gene_family_matrix.shape[0])+.5)
 ax.set_xticks(numpy.arange(gene_family_matrix.shape[1])+.5)
 ax.set_xticklabels(envs_short,fontsize=8)
-ax.set_yticklabels(gene_list_by_families[::-1], fontsize=5)
+#ax.set_yticklabels(gene_list_by_families[::-1], fontsize=5)
+ax.set_yticklabels(gene_label_list[::-1], fontsize=5)
 ax.tick_params(axis='both',length=0)
 
 ny_grid = gene_family_matrix.shape[0]

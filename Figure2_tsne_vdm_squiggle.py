@@ -174,7 +174,7 @@ dummy_fig = pt.figure()
 ax = pt.gca()
 
 key_list = ["vplus","vplus-dip","vminus","vminus-dip"]
-grp_labels = ["V+/H","V+/D","V-/H","V-/D"]
+grp_labels = ["V+/Haploid","V+/Diploid","V-/Haploid","V-/Diploid"]
 marker_list = ["o","v","s","^"]
 
 legend_handles2 = []
@@ -225,7 +225,7 @@ for i in range(len(key_list)):
 		#ax2.scatter(tsne_divided[key][pt,0],tsne_divided[key][pt,1], c=color_mat[key][pt], marker=marker_list[i], alpha=alpha_ts)
 	
 legend1 = pt.legend(legend_handles1[2:],grp_labels[2:],loc=(.7,.5))
-legend2 = pt.legend(legend_handles1[0:2],grp_labels[:2],loc=(.28,.88))
+legend2 = pt.legend(legend_handles1[0:2],grp_labels[:2],loc=(.5,.88))
 ax2.add_artist(legend1)
 ax2.add_artist(legend2)
 #ax2.legend(legend_handles1[3:],grp_labels[3:],loc=(.8,.6))
