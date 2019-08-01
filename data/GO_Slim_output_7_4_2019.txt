@@ -1,0 +1,52 @@
+GOID	TERM	NUM_LIST_ANNOTATIONS	LIST_SIZE	CLUSTER_FREQUENCY	TOTAL_NUM_ANNOTATIONS	POPULATION_SIZE	GENOME_FREQUENCY	ANNOTATED_GENES
+GO:0042221	response to chemical	13	41	31.71%	561	6437	8.72%	CCW12, FAR1, FRA1, GPB1, GPB2, GRR1, GRX7, HNM1, IRA2, PBS2, STE11, STE12, STE7
+GO:0031399	regulation of protein modification process	9	41	21.95%	214	6437	3.32%	FAR1, GPB1, GPB2, MCX1, PBS2, SSK1, SSK2, STE11, STE7
+GO:0006366	transcription by RNA polymerase II	9	41	21.95%	540	6437	8.39%	ASG1, FRA1, GPB2, HAA1, SFL1, STE12, TRA1, UME1, YTA7
+GO:0006468	protein phosphorylation	9	41	21.95%	245	6437	3.81%	FAR1, GPB1, GPB2, HAL5, PBS2, SSK1, SSK2, STE11, STE7
+GO:0007124	pseudohyphal growth	7	41	17.07%	79	6437	1.23%	GPB1, GPB2, GRR1, SFL1, STE11, STE12, STE7
+GO:0001403	invasive growth in response to glucose limitation	7	41	17.07%	61	6437	0.95%	GPB1, GPB2, SFL1, STE11, STE12, STE7, YTA7
+GO:0033043	regulation of organelle organization	6	41	14.63%	326	6437	5.06%	SIR3, SIR4, SSK1, SSK2, UME1, YTA7
+GO:0006325	chromatin organization	6	41	14.63%	310	6437	4.82%	SIR1, SIR3, SIR4, TRA1, UME1, YTA7
+GO:0000746	conjugation	6	41	14.63%	122	6437	1.90%	CCW12, FAR1, GRR1, STE11, STE12, STE7
+GO:0071554	cell wall organization or biogenesis	5	41	12.20%	302	6437	4.69%	ANP1, CCW12, ROT2, STE11, STE7
+GO:0070647	protein modification by small protein conjugation or removal	5	41	12.20%	220	6437	3.42%	GPB1, GRR1, NFI1, TOM1, UBP14
+GO:0006970	response to osmotic stress	4	41	9.76%	84	6437	1.30%	PBS2, SSK1, SSK2, STE11
+GO:0055085	transmembrane transport	4	41	9.76%	455	6437	7.07%	HNM1, MCX1, SMF1, SMF2
+GO:0006873	cellular ion homeostasis	4	41	9.76%	157	6437	2.44%	HAA1, HAL5, SMF1, SMF2
+GO:0009408	response to heat	3	41	7.32%	89	6437	1.38%	PBS2, SFL1, STE11
+GO:0007010	cytoskeleton organization	3	41	7.32%	271	6437	4.21%	PBS2, SSK1, SSK2
+GO:0051726	regulation of cell cycle	3	41	7.32%	291	6437	4.52%	FAR1, GRR1, UME1
+GO:0000278	mitotic cell cycle	3	41	7.32%	375	6437	5.83%	FAR1, GRR1, TOM1
+GO:0006811	ion transport	3	41	7.32%	360	6437	5.59%	HNM1, SMF1, SMF2
+GO:0051603	proteolysis involved in cellular protein catabolic process	3	41	7.32%	258	6437	4.01%	GPB1, TOM1, UBP14
+GO:0006629	lipid metabolic process	3	41	7.32%	347	6437	5.39%	IPT1, IST2, OSH7
+GO:0005975	carbohydrate metabolic process	3	41	7.32%	261	6437	4.05%	GRR1, ROT2, UBP14
+GO:0006281	DNA repair	3	41	7.32%	301	6437	4.68%	SIR3, SIR4, TRA1
+GO:0018193	peptidyl-amino acid modification	3	41	7.32%	249	6437	3.87%	NFI1, PBS2, TRA1
+GO:0006979	response to oxidative stress	2	41	4.88%	125	6437	1.94%	GRX7, IRA2
+GO:0032196	transposition	2	41	4.88%	114	6437	1.77%	STE11, STE7
+GO:0051321	meiotic cell cycle	2	41	4.88%	320	6437	4.97%	GPB2, UME1
+GO:0006997	nucleus organization	1	41	2.44%	69	6437	1.07%	TOM1
+GO:0042274	ribosomal small subunit biogenesis	1	41	2.44%	149	6437	2.31%	TOM1
+GO:0007005	mitochondrion organization	1	41	2.44%	282	6437	4.38%	MCX1
+GO:0006869	lipid transport	1	41	2.44%	80	6437	1.24%	OSH7
+GO:0048285	organelle fission	1	41	2.44%	269	6437	4.18%	UME1
+GO:0006897	endocytosis	1	41	2.44%	127	6437	1.97%	OSH7
+GO:0016570	histone modification	1	41	2.44%	138	6437	2.14%	TRA1
+GO:0006360	transcription by RNA polymerase I	1	41	2.44%	69	6437	1.07%	UME1
+GO:0006865	amino acid transport	1	41	2.44%	57	6437	0.89%	HNM1
+GO:0006486	protein glycosylation	1	41	2.44%	76	6437	1.18%	ANP1
+GO:0015931	nucleobase-containing compound transport	1	41	2.44%	183	6437	2.84%	TOM1
+GO:0006401	RNA catabolic process	1	41	2.44%	153	6437	2.38%	SIR3
+GO:0006605	protein targeting	1	41	2.44%	211	6437	3.28%	MCX1
+GO:0043543	protein acylation	1	41	2.44%	78	6437	1.21%	TRA1
+GO:0006520	cellular amino acid metabolic process	1	41	2.44%	229	6437	3.56%	TRP4
+GO:0007059	chromosome segregation	1	41	2.44%	211	6437	3.28%	NFI1
+GO:0006364	rRNA processing	1	41	2.44%	354	6437	5.50%	TOM1
+GO:0043934	sporulation	1	41	2.44%	171	6437	2.66%	GPB2
+GO:0006091	generation of precursor metabolites and energy	1	41	2.44%	141	6437	2.19%	GRX7
+GO:0006974	cellular response to DNA damage stimulus	1	41	2.44%	236	6437	3.67%	GRR1
+GO:0006470	protein dephosphorylation	1	41	2.44%	95	6437	1.48%	HAL5
+GO:0006887	exocytosis	1	41	2.44%	57	6437	0.89%	OSH7
+GO:0006457	protein folding	1	41	2.44%	114	6437	1.77%	MCX1
+GO:0042273	ribosomal large subunit biogenesis	1	41	2.44%	122	6437	1.90%	TOM1
