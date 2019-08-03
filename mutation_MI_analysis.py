@@ -256,7 +256,7 @@ for n in range(niter):
 p = numpy.sum( numpy.array(MI_list) > MI_base )/niter
 print(p)
 print(MI_base)
-print(numpy.mean(MI_list))
+print('Null statistic: 50 (5,95), ', numpy.percentile(MI_list,50),numpy.percentile(MI_list,5),numpy.percentile(MI_list,95))
 pt.figure()
 pt.hist(MI_list)
 

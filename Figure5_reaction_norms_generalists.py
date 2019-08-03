@@ -104,8 +104,12 @@ for evol_env in evolution_envs:
 	legend_handle = ax4.bar( env_ind,  generalists, yerr=gen_err, width=.48,color='C0' )
 	legend_handles_list.append(legend_handle)
 	
-	legend_handle3 = axa.errorbar(x_scale_list+.005*env_ind, numpy.mean(nacl_fit_dict[evol_env],axis=0), yerr=numpy.std(nacl_fit_dict[evol_env],axis=0)/numpy.sqrt(clone_count - 1), marker='o', color = color_list[env_ind], linewidth = 3, elinewidth = 2)
-	
+	#legend_handle3 = axa.errorbar(x_scale_list+.005*env_ind, numpy.mean(nacl_fit_dict[evol_env],axis=0), yerr=numpy.std(nacl_fit_dict[evol_env],axis=0)/numpy.sqrt(clone_count - 1), marker='o', color = color_list[env_ind], linewidth = 3, elinewidth = 2)
+	legend_handle3 = axa.plot(x_scale_list+.01*env_ind, numpy.mean(nacl_fit_dict[evol_env],axis=0),  marker='o', color = color_list[env_ind], linewidth = 3,zorder=2)
+
+	#if len(nacl_fit_dict[evol_env]) < 10.5:
+	for cl in range(len(nacl_fit_dict[evol_env])):
+		axa.plot(x_scale_list+.01*env_ind, nacl_fit_dict[evol_env][cl,:], 's', color = color_list[env_ind], markersize=3,alpha=.6,zorder=1)
 	env_ind += 1
 	
 # env_ind = 0
@@ -198,9 +202,12 @@ for evol_env in evolution_envs:
 	
 	legend_handle = ax5.bar( env_ind,  generalists, yerr=gen_err, width=.8,color='C0' )
 	legend_handles_list.append(legend_handle)
-	legend_handle = axb.errorbar(x_scale_list+.02*env_ind, numpy.mean(ph_fit_dict[evol_env],axis=0), yerr=numpy.std(ph_fit_dict[evol_env],axis=0)/numpy.sqrt(clone_count - 1), marker='o', color = color_list[env_ind], linewidth = 3, elinewidth = 2)
-	#axb.plot(x_scale_list[env_ind]+.02*env_ind, numpy.mean(ph_fit_dict[evol_env],axis=0)[env_ind], color = color_list[env_ind], marker='o', markersize=8)
+	#legend_handle = axb.errorbar(x_scale_list+.02*env_ind, numpy.mean(ph_fit_dict[evol_env],axis=0), yerr=numpy.std(ph_fit_dict[evol_env],axis=0)/numpy.sqrt(clone_count - 1), marker='o', color = color_list[env_ind], linewidth = 3, elinewidth = 2)
+	legend_handle = axb.plot(x_scale_list+.04*env_ind, numpy.mean(ph_fit_dict[evol_env],axis=0), marker='o', color = color_list[env_ind], linewidth = 3,zorder=2)
 
+	#axb.plot(x_scale_list[env_ind]+.02*env_ind, numpy.mean(ph_fit_dict[evol_env],axis=0)[env_ind], color = color_list[env_ind], marker='o', markersize=8)
+	for cl in range(len(ph_fit_dict[evol_env])):
+		axb.plot(x_scale_list+.04*env_ind, ph_fit_dict[evol_env][cl,:], 's', color = color_list[env_ind], markersize=3,alpha=.6,zorder=1)
 	env_ind += 1
 
 
@@ -218,8 +225,8 @@ ax5.set_xlabel( 'pH, home env.' )
 
 
 axb.legend( legend_handles_list2, legend_label_list, numpoints = 1, loc='upper center', fontsize=8)
-axb.set_ylim([-6,8])
-axb.set_xlim([3 - 4.3*pad, 7.3 + 4.3*pad])
+axb.set_ylim([-6,9.5])
+axb.set_xlim([3 - 4.3*pad, 7.5 + 4.3*pad])
 axb.set_xticks(x_scale_list)
 axb.set_xticklabels([])
 ###Temperature (low to high)
@@ -282,7 +289,11 @@ for evol_env in evolution_envs:
 	
 	legend_handle = ax6.bar( env_ind,  generalists, yerr=gen_err, width=.48,color='C0' )
 	legend_handles_list.append(legend_handle)
-	legend_handle = axc.errorbar(x_scale_list+.1*env_ind, numpy.mean(temp_fit_dict[evol_env],axis=0), yerr=numpy.std(temp_fit_dict[evol_env],axis=0)/numpy.sqrt(clone_count - 1), marker='o', color = color_list[env_ind], linewidth = 3, elinewidth = 2)
+	#legend_handle = axc.errorbar(x_scale_list+.1*env_ind, numpy.mean(temp_fit_dict[evol_env],axis=0), yerr=numpy.std(temp_fit_dict[evol_env],axis=0)/numpy.sqrt(clone_count - 1), marker='o', color = color_list[env_ind], linewidth = 3, elinewidth = 2)
+	legend_handle = axc.plot(x_scale_list+.2*env_ind, numpy.mean(temp_fit_dict[evol_env],axis=0), marker='o', color = color_list[env_ind], linewidth = 3,zorder=2)
+
+	for cl in range(len(temp_fit_dict[evol_env])):
+		axc.plot(x_scale_list+.2*env_ind, temp_fit_dict[evol_env][cl,:], 's', color = color_list[env_ind], markersize=3,alpha=.6,zorder=1)
 	#if env_ind < 1.5:
 	#	axc.plot(x_scale_list[env_ind]+.1*env_ind, numpy.mean(temp_fit_dict[evol_env],axis=0)[env_ind], color = color_list[env_ind], marker='o', markersize=8)
 	#else:
@@ -305,7 +316,7 @@ ax6.set_xticklabels( ['21','30', '37'], fontsize=12 )
 ax6.set_xlabel( 'Temperature, home env.' )
 ax3.set_xlabel( 'Temperature (degrees C)' )
 
-axc.legend( legend_handles_list2, legend_label_list, numpoints = 1, loc='upper left', fontsize=8)
+axc.legend( legend_handles_list2, legend_label_list, numpoints = 1, loc=(.05,.07), fontsize=8)
 
 axc.set_xlim([ 21 - 16*pad, 37 + 16*pad])
 axc.set_xticks( x_scale_list)
@@ -317,5 +328,5 @@ for i in range(len(ax_handles)):
 	ax = ax_handles[i]
 	ax.text(-.1,1.1,ax_labels[i],horizontalalignment='center',verticalalignment='center', transform=ax.transAxes, fontsize=14, fontname='Arial')
 
-pt.savefig('figures/reactionnorms_fracbeneficial_generalists_check.pdf',bbox_inches='tight')
+pt.savefig('figures/reactionnorms_fracbeneficial_generalists_withpts.pdf',bbox_inches='tight')
 pt.close()
